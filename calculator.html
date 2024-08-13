@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate - Aunthify</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            font-family: 'Courirer New', Courier, monospace;
+            font-size: 14px;
+            font-weight: 500;
+
+        }
+        .container{
+            width: 80%;
+            background-color: white;
+            padding: 10px 20px;
+            margin: 0 auto;
+            color: #00bfbf;
+        }
+        input[type=text]{
+            width: 200px;
+            padding: 2px;
+            border: solid 1px #2011a9;
+            margin-bottom: 20px;
+        }
+        input[type=submit]{
+            width: 200px;
+            padding: 20px;
+
+        }
+        
+        input[type=submit]{
+            width: 202px;
+            padding: 10px;
+            border: solid 1px #2011a9;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            width: 50%;
+            background-color: #007bff
+            padding: 10px 20px;
+            margin: 0 auto;
+            color: #00bfbf;
+           
+        }
+   
+h1{
+    text-align: center;
+}
+
+    </style>
+  
+   
+  <script>
+    function calculatearea(){
+    var length = document.getElementById("length").value;
+    var width = document.getElementById("width").value;
+    var area= length*width;
+    document.getElementById("result").innerHTML= area;
+}
+function reset() {
+    var length = document.getElementById("length").value = "0";
+    var width = document.getElementById("width").value = "0";
+    var result =document.getElementById("result"). value = "0";
+}
+</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="info.html" class="nav-link">Info</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="calculator.html" class="nav-link">Calculator</a>
+      
+        </nav>
+    </header>
+    <main>
+        <section id="calculator" class="main-section">
+            <h1>Aunthify</h1>
+            <br>
+            <h2>Calculate the Area</h2>
+            <div class="container">
+               
+                <div class="container">
+                    <h1>CALCULATOR</h1>
+                    <label>LENGTH:</label><br>
+                    <input type="text" id="length" class="input" placeholder="Enter length"/>
+                    <br>
+                    <br>
+                    <label>WIDTH:</label><br>
+                    <input type="text" id="width" class="input" placeholder="Enter width"/>
+                    <br>
+                    <br>
+                    <div id="result">
+                        
+                    </div>
+                    <input type="button" value="Calculate area" onclick="calculatearea()"/>
+                    <input type="button" value="Reset" onclick="reset()"/>
+                   
+                </div>
+                <footer>
+                    <p>&copy; 2024 Aunthify. All rights are reserved.</p>
+                </footer>
+</body>
+</html>
